@@ -11,7 +11,7 @@ from pygame import mixer
 pygame.init()
 
 # Background music
-mixer.music.load("disco_dancing.wav")
+mixer.music.load("audio/disco_dancing.wav")
 mixer.music.play(-1)
 
 # Functions
@@ -40,17 +40,17 @@ over_font = pygame.font.Font("freesansbold.ttf", 64)
 # Making the screen
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 # Setting the title and the logo
-pygame.display.set_caption("Hansa mattar")
+pygame.display.set_caption("Space Rocks")
 # icon = load_image("icon.png", 30, 30)
 
 
 # Initialize the player
-player_img = load_image("space-ship.png", 60, 60)
+player_img = load_image("images/space-ship.png", 60, 60)
 player = Player(player_img, 370, 500)
 player_move = 0
 
 # Initialize the enemy
-enemy_image = load_image("stone.png", 60, 60)
+enemy_image = load_image("images/stone.png", 60, 60)
 enemy_list = []
 for i in range(NUM_ENEMIES):
     enemy_list.append(Enemy(enemy_image))
@@ -58,7 +58,7 @@ enemy_move_x = ENEMY_SPEED
 enemy_move_y = ENEMY_SPEED
 
 # Initialize the bullet
-bullet_image = load_image("bullet.png", 30, 30)
+bullet_image = load_image("images/bullet.png", 30, 30)
 bullet_state = "ready"
 bullet_list = []
 bullet_fire = 0
